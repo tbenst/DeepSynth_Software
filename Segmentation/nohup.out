@@ -1,0 +1,4 @@
+  File "seg_train.py", line 92
+    inputs, labels = data
+                        ^
+TabError: inconsistent use of tabs and spaces in indentation
