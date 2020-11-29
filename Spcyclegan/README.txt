@@ -132,15 +132,23 @@ Please change the commands according to your own testing options.
 
 CUDA_VISIBLE_DEVICES=0 nohup python train.py --dataroot ./datasets/immu --name immu --model cycle_lo_seg --no_dropout --which_model_netG resnet_9blocks --input_nc 1 --output_nc 1 --phase train --identity 0 > log_file/log_file_200114.out &
 
+
+
 ### Testing command example:
 Example 1: to test the provided trained model,
 Change the commands according to your own testing options
 
 CUDA_VISIBLE_DEVICES=0 python test.py --dataroot ./datasets/immu --name immu_spcyclegan_package --model test_seg --phase test --which_model_netG resnet_9blocks --no_dropout --display_id 0 --dataset_mode single --which_direction AtoB --which_epoch 200 --loadSize 256 --fineSize 256 --input_nc 1 --output_nc 1 --how_many 512 > log_file/log_file_200114test.out
 
+python train.py --dataroot ./datasets/zfish-b115-25x-0.9x --name zfish-b115-25x-0.9x --model cycle_lo_seg --no_d
+ropout --which_model_netG resnet_9blocks --input_nc 1 --output_nc 
+1 --phase train --identity 0
+
 Example 2: to test the models generated with the training command example above
 
 CUDA_VISIBLE_DEVICES=0 python test.py --dataroot ./datasets/immu --name immu --model test_seg --phase test --which_model_netG resnet_9blocks --no_dropout --display_id 0 --dataset_mode single --which_direction AtoB --which_epoch 200 --loadSize 256 --fineSize 256 --input_nc 1 --output_nc 1 --how_many 512 > log_file/log_file_200114test.out
+
+python test.py --dataroot ./datasets/zfish-b115-25x-0.9x --name zfish-b115-25x-0.9x --model test_seg --phase test --which_model_netG resnet_9blocks --no_dropout --display_id 0 --dataset_mode single --which_direction AtoB --which_epoch 200 --loadSize 256 --fineSize 256 --input_nc 1 --output_nc 1 --how_many 512
 
 ### Pre-trained models
 
@@ -191,7 +199,3 @@ Pix2pix:  [[Project]](https://phillipi.github.io/pix2pix/) [[Paper]](https://arx
 
 ## Contact
 If you have any questions about our work or code, please send us an e-mail at [imart@ecn.purdue.edu](mailto:imart@ecn.purdue.edu).
-
-
-
-

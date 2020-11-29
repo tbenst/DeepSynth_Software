@@ -1,0 +1,8 @@
+torch==1.0.1.post2
+torchfile==0.1.0
+torchvision==0.2.2
+visdom==0.1.8.8
+numpy==1.16.3
+scipy==1.2.1
+scikit-image==0.15.0
+dominate==2.3.1
